@@ -1,0 +1,222 @@
+﻿/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: auto;
+    font-family: "Open Sans", sans-serif;
+    background-color: #00A9E0;
+}
+
+body {
+    display: flex;
+    padding: 50px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1100px;
+    min-height: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Parte azul - Evento */
+.evento {
+    flex: 1;
+    background-color: #21A9E1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+    .evento .logo img {
+        max-width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .evento h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .evento p {
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+/* Parte branca - Formulário */
+.formulario {
+    flex: 2;
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo {
+    margin-bottom: 20px;
+}
+
+    .titulo a {
+        color: #21A9E1;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.input-form {
+    margin-bottom: 15px;
+}
+
+    .input-form label {
+        font-size: 14px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .input-form input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        background-color: #ebe9ec;
+    }
+
+        .input-form input:focus {
+            outline: none;
+        }
+
+form button {
+    width: 70%;
+    padding: 12px;
+    display: block;
+    margin: 30px auto 0 auto;
+    background-color: #21A9E1;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    form button:hover {
+        background-color: #1a8fc7;
+    }
+
+/* Segundo Container  - Inscritos Evento */
+.inscritos-evento {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    padding: 40px;
+}
+
+.inscritos {
+    color: #555;
+    height: 300px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto; /* mostra barra de rolagem */
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 90%;
+        min-height: auto;
+    }
+
+    .evento, .formulario {
+        flex: none;
+        width: 100%;
+        padding: 20px;
+    }
+
+        .evento h1 {
+            font-size: 24px;
+        }
+
+        .evento p {
+            font-size: 14px;
+        }
+
+    .titulo h3 {
+        font-size: 20px;
+    }
+
+    .input-form input {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    form button {
+        width: 90%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .inscritos-evento {
+        padding: 20px;
+    }
+
+    .inscritos {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .evento h1 {
+        font-size: 20px;
+    }
+
+    .evento p {
+        font-size: 13px;
+    }
+
+    .titulo h3 {
+        font-size: 18px;
+    }
+
+    .input-form input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
